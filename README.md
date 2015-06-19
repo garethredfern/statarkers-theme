@@ -59,8 +59,6 @@ To install the theme follow the instructions below.
 
 The Gruntfile is set up to watch a JS file in your theme folder in js/app it then compresses the JS into the theme JS folder, it is important that these files are named the same as your theme.
 
-You can visit [Statamic Themes](http://www.statamicthemes.com/themes) for more theme information and a demo is also availble [here](http://statarkers.statamicthemes.com). There is also a video which takes you through how to install the theme [here](http://www.statamicthemes.com/articles/part-1-installing-the-statarkers-statamic-theme).
-
 ### Additional Modules
 - [Statarkers Membership](https://github.com/statamicthemes/statarkers-membership)
 - [Statarkers Nav](https://github.com/statamicthemes/statarkers-nav)
