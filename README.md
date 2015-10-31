@@ -2,14 +2,6 @@
 
 Born from the idea of a blank canvas for starting your Statamic sites this theme is loosely based on the popular [Starkers](http://viewportindustries.com/products/starkers/) theme for Wordpress. The idea being that you can load the theme into your Statamic themes folder, add the dummy content and fields to your Statamic install and get designing and building your Statamic sites in even less time than you were already.
 
-## Raven Forms
-An example form template and partial are included with the theme, to make use of them you will need to have [Raven Forms](http://statamic.com/add-ons/raven) installed. To get the example working just change the `to` variable on line 42 of the _config/formsets/contact.yaml file. Then either add a [route](http://statamic.com/learn/advanced-features/routes) of `/contact : /contact` or set up a content page for your contact form in your _content folder and point the `_template` YAML to `contact` . If you don't want to use Raven just delete:
-
-- _config/formsets
-- _themes/statarkers/templates/contact.html
-- _themes/statarkers/partials/forms/_contact_form.html
-- _themes/statarkers/templates/emails/
-
 ## Theme Use
 You can use Statarkers in any way you wish, please feel free to fork it on github. As the theme is offered for free, it’s also offered with limited support. If you find a bug, please let me know and I’ll fix it as soon as possible. Any improvements and feature requests can be asked through github.
 
@@ -29,6 +21,14 @@ To install the theme follow the instructions below.
 8. In your Statamic install go to `_config` settings YAML file and change the `_theme` name from acadia to the name you have given to your theme. If this is a clean install you should also change the site name and url to whatever you are using. I suggest also changing the `_taxonomy_slugify` to true as this gives you cleaner url's.
 9. Add the gitignore file to the root of your project/site (remove sample from the front of the file name), in here there are some handy ignores for Statamic.
 10. Add the dev.yaml to your _config/environments folder.
+
+## Raven Forms
+An example form template and partial are included with the theme, to make use of them you will need to have [Raven Forms](http://statamic.com/add-ons/raven) installed. To get the example working just change the `to` variable on line 42 of the _config/formsets/contact.yaml file. Then either add a [route](http://statamic.com/learn/advanced-features/routes) of `/contact : /contact` or set up a content page for your contact form in your _content folder and point the `_template` YAML to `contact` . If you don't want to use Raven just delete:
+
+- _config/formsets
+- _themes/statarkers/templates/contact.html
+- _themes/statarkers/partials/forms/_contact_form.html
+- _themes/statarkers/templates/emails/
 
 ### Additional Modules
 - [Statarkers Membership](https://github.com/statamicthemes/statarkers-membership)
