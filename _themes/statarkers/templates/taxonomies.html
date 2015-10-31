@@ -1,19 +1,19 @@
 <main role="main">
-  {{ if segment_2 == "categories" }}
-  <h2 class="main__heading">Category &ndash; {{ taxonomy_slug|deslugify|title }}{{ if get:page > 0 }} &ndash; Page {{ get:page }}{{ endif }}</h2>
-  {{ endif }}
-  {{ if segment_2 == "tags" }}
-  <h2 class="main__heading">Tag &ndash; {{ taxonomy_slug|deslugify|title }}{{ if get:page > 0 }} &ndash; Page {{ get:page }}{{ endif }}</h2>
-  {{ endif }}
+    {{ if segment_2 == "categories" }}
+    <h2>Category &ndash; {{ taxonomy_slug|deslugify|title }}{{ if get:page > 0 }} &ndash; Page {{ get:page }}{{ endif }}</h2>
+    {{ endif }}
+    {{ if segment_2 == "tags" }}
+    <h2>Tag &ndash; {{ taxonomy_slug|deslugify|title }}{{ if get:page > 0 }} &ndash; Page {{ get:page }}{{ endif }}</h2>
+    {{ endif }}
 
-  {{ theme:partial src="_article_listing" fold={blog_name} lim="5" tax="yes" }}
+    {{ theme:partial src="_article_listing" fold={blog_name} lim="5" tax="yes" }}
 </main>
 
 {{#
-====================================
-  NOTES
-====================================
+    ====================================
+    NOTES
+    ====================================
 
-This is the taxonomy listing template, it displays content when a category or tag is clicked. For more information see: http://statamic.com/learn/core-concepts/taxonomies.
+    This is the taxonomy listing template, it displays content when a category or tag is clicked. For more information see: http://statamic.com/learn/core-concepts/taxonomies.
 
-#}}
+    #}}

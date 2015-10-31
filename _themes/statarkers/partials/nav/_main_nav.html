@@ -1,34 +1,34 @@
-<nav role="navigation" class="nav--primary">
-  <div class="constrain">
-    <ul class="nav__list nav__list--primary">
-      <li class="nav__listItem">
-        <a href="{{ homepage }}"{{ if segment_1 == "" }} class="is-current"{{ endif }}>Home</a>
-      </li>
-      {{ nav from="/" max_depth="2" }}
-      <li class="nav__listItem">
-        <a href="{{ url }}"{{ if is_current }} class="is-current"{{ endif }}>{{ title }}</a>
-        {{ if children }}
+<nav role="navigation">
+    <div>
         <ul>
-          {{ children }}
-          <li class="nav__listItem">
-            <a href="{{ url }}"{{ if is_current }} class="is-current"{{ endif }}>{{ title }}</a>
-          </li>
-          {{ /children }}
+            <li>
+                <a href="{{ homepage }}"{{ if segment_1 == "" }} class="is-current"{{ endif }}>Home</a>
+            </li>
+            {{ nav from="/" max_depth="2" }}
+            <li>
+                <a href="{{ url }}"{{ if is_current }} class="is-current"{{ endif }}>{{ title }}</a>
+                {{ if children }}
+                <ul>
+                    {{ children }}
+                    <li>
+                        <a href="{{ url }}"{{ if is_current }} class="is-current"{{ endif }}>{{ title }}</a>
+                    </li>
+                    {{ /children }}
+                </ul>
+                {{ endif }}
+            </li>
+            {{ /nav }}
         </ul>
-        {{ endif }}
-      </li>
-      {{ /nav }}
-    </ul>
-  </div><!-- END .constrain -->
+    </div><!-- END .constrain -->
 </nav>
 
 {{#
-====================================
-  NOTES
-====================================
+    ====================================
+    NOTES
+    ====================================
 
-This is the main nav partial.
+    This is the main nav partial.
 
-It uses the nav tag to render a list of navigation items. For more information on the nav tag see http://statamic.com/learn/documentation/tags/nav.
+    It uses the nav tag to render a list of navigation items. For more information on the nav tag see http://statamic.com/learn/documentation/tags/nav.
 
-#}}
+    #}}

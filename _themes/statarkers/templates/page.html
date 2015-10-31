@@ -1,14 +1,14 @@
 <main role="main">
-  {{ if alt_title }}
-  <h2 class="main__heading">{{ alt_title }}</h2>
-  {{ else }}
-  <h2 class="main__heading">{{ title }}</h2>
-  {{ endif }}
-  {{ content }}
+    {{ if alt_title }}
+    <h2>{{ alt_title }}</h2>
+    {{ else }}
+    <h2>{{ title }}</h2>
+    {{ endif }}
+    {{ content }}
 </main>
 
 {{ if segment_1 == "" }}
-<section class="articles">
-{{ theme:partial src="_article_listing" fold="{blog_name}" lim="5" tax="no" }}
+<section>
+    {{ theme:partial src="_article_listing" fold="{blog_name}" lim="5" tax="no" }}
 </section>
 {{ endif }}

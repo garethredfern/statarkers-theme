@@ -1,45 +1,45 @@
 {{# TOP LEVEL PAGES === #}}
 
 {{ if _response != "404" && segment_1 != blog_name }}
-  <title>{{ if meta_title|not_empty }}{{ meta_title }}{{ else }}{{ title }}{{ endif }}{{ if get:page > 0 }} Page {{ get:page }}{{ endif }} | {{ _site_name }}</title>
-  {{ if meta_desc|not_empty }}
-  <meta name="description" content="{{ meta_desc|striptags }}">
-  {{ endif }}
+<title>{{ if meta_title|not_empty }}{{ meta_title }}{{ else }}{{ title }}{{ endif }}{{ if get:page > 0 }} Page {{ get:page }}{{ endif }} | {{ _site_name }}</title>
+{{ if meta_desc|not_empty }}
+<meta name="description" content="{{ meta_desc|striptags }}">
+{{ endif }}
 {{ endif }}
 
 {{# BLOG =============== #}}
 
 {{ if segment_1 == blog_name && (segment_2 != "categories" || segment_2 != "tags") && segment_3 == "" }}
-  <title>{{ if meta_title|not_empty }}{{ meta_title }}{{ else }}{{ title }}{{ endif }}{{ if get:page > 0 }} Page {{ get:page }}{{ endif }} | {{ _site_name }}</title>
-  {{ if meta_desc|not_empty }}
-  <meta name="description" content="{{ meta_desc|striptags }}">
-  {{ endif }}
+<title>{{ if meta_title|not_empty }}{{ meta_title }}{{ else }}{{ title }}{{ endif }}{{ if get:page > 0 }} Page {{ get:page }}{{ endif }} | {{ _site_name }}</title>
+{{ if meta_desc|not_empty }}
+<meta name="description" content="{{ meta_desc|striptags }}">
+{{ endif }}
 {{ endif }}
 
 {{ if segment_1 == blog_name && segment_2 == "categories" }}
-  <title>Articles With The Category {{ taxonomy_slug|deslugify|title }}{{ if get:page > 0 }} Page {{ get:page }}{{ endif }} | {{ _site_name }}</title>
-  <meta name="description" content="A selection of articles that are in the category of {{ taxonomy_slug|deslugify }}.">
+<title>Articles With The Category {{ taxonomy_slug|deslugify|title }}{{ if get:page > 0 }} Page {{ get:page }}{{ endif }} | {{ _site_name }}</title>
+<meta name="description" content="A selection of articles that are in the category of {{ taxonomy_slug|deslugify }}.">
 {{ endif }}
 
 {{ if segment_1 == blog_name && segment_2 == "tags" }}
-  <title>Articles Tagged {{ taxonomy_slug|deslugify|title }}{{ if get:page > 0 }} Page {{ get:page }}{{ endif }} | {{ _site_name }}</title>
-  <meta name="description" content="A selection of articles tagged under {{ taxonomy_slug|deslugify }}.">
+<title>Articles Tagged {{ taxonomy_slug|deslugify|title }}{{ if get:page > 0 }} Page {{ get:page }}{{ endif }} | {{ _site_name }}</title>
+<meta name="description" content="A selection of articles tagged under {{ taxonomy_slug|deslugify }}.">
 {{ endif }}
 
 {{# 404 =============== #}}
 
 {{ if _response == "404" }}
-  <title>Page Missing | {{ _site_name }}</title>
-  <meta name="description" content="Sorry the page you are looking for is missing, it may have been moved or deleted, please use the navigation to search for similar content.">
+<title>Page Missing | {{ _site_name }}</title>
+<meta name="description" content="Sorry the page you are looking for is missing, it may have been moved or deleted, please use the navigation to search for similar content.">
 {{ endif }}
 
 {{#
-====================================
-  NOTES
-====================================
+    ====================================
+    NOTES
+    ====================================
 
-This is the meta template for your site, it is used to dynamically generate each page title and description. You will only need to add to this if additional pages that use taxonomy are used e.g. you add additional areas that use categories or tags.
+    This is the meta template for your site, it is used to dynamically generate each page title and description. You will only need to add to this if additional pages that use taxonomy are used e.g. you add additional areas that use categories or tags.
 
-If you do add additional taxonomy pages use the blog meta as an example.
+    If you do add additional taxonomy pages use the blog meta as an example.
 
-#}}
+    #}}

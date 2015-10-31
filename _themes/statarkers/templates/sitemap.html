@@ -1,35 +1,35 @@
 {{ entries:listing folder="{blog_name}" limit="1000" }}
-  <url>
+<url>
     <loc>{{ _site_url }}{{ url }}</loc>
     <lastmod>{{ datestamp format="Y-m-d" }}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-  </url>
+</url>
 {{ /entries:listing }}
 {{ nav from="/" max_depth="3" exclude="404" }}
-  <url>
+<url>
     <loc>{{ _site_url }}{{ url }}</loc>
     <lastmod>{{ last_modified format="Y-m-d" }}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-  </url>
-  {{ if children }}
-  {{ children }}
-  <url>
+</url>
+{{ if children }}
+{{ children }}
+<url>
     <loc>{{ _site_url }}{{ url }}</loc>
     <lastmod>{{ last_modified format="Y-m-d" }}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-  </url>
-  {{ /children }}
-  {{ endif }}
+</url>
+{{ /children }}
+{{ endif }}
 {{ /nav }}
 
-{{# 
-====================================
-  NOTES
-====================================
+{{#
+    ====================================
+    NOTES
+    ====================================
 
-This template generates a site map which includes your main blog articles and any links generated from your navigation. If your content folder is not called blog change the folder parameter to whatever you have named the folder in the theme.yaml file.
-  
-#}}
+    This template generates a site map which includes your main blog articles and any links generated from your navigation. If your content folder is not called blog change the folder parameter to whatever you have named the folder in the theme.yaml file.
+
+    #}}

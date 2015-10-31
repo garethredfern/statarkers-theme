@@ -1,28 +1,28 @@
 <main role="main">
-  <h2 class="main__heading">The Page You Are Looking For Is Missing</h2>
-  {{ content }}
-  <ul>
-    <li><a href="{{ homepage }}">Home</a></li>
-    {{ nav from="/" max_depth="2" }}
-    <li>
-      <a href="{{ url }}">{{ title }}</a>
-      {{ if children }}
-      <ul>
-        {{ children }}
-        <li><a href="{{ url }}">{{ title }}</a></li>
-        {{ /children }}
-      </ul>
-      {{ endif }}
-    </li>
-    {{ /nav }}
-  </ul>
+    <h2>The Page You Are Looking For Is Missing</h2>
+    {{ content }}
+    <ul>
+        <li><a href="{{ homepage }}">Home</a></li>
+        {{ nav from="/" max_depth="2" }}
+        <li>
+            <a href="{{ url }}">{{ title }}</a>
+            {{ if children }}
+            <ul>
+                {{ children }}
+                <li><a href="{{ url }}">{{ title }}</a></li>
+                {{ /children }}
+            </ul>
+            {{ endif }}
+        </li>
+        {{ /nav }}
+    </ul>
 </main>
 
 {{#
-====================================
-  NOTES
-====================================
+    ====================================
+    NOTES
+    ====================================
 
-This displays the content for the 404 page.
+    This displays the content for the 404 page.
 
-#}}
+    #}}

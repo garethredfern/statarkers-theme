@@ -1,20 +1,22 @@
 <main role="main">
-  {{ if alt_title }}
-  <h2 class="main__heading">{{ alt_title }}</h2>
-  {{ else }}
-  <h2 class="main__heading">{{ title }}</h2>
-  {{ endif }}
-  {{ content }}
-  <div class="contact-form">
-    {{ theme:partial src="forms/_contact_form" }}
-  </div>
+    {{ if alt_title }}
+    <h2>{{ alt_title }}</h2>
+    {{ else }}
+    <h2>{{ title }}</h2>
+    {{ endif }}
+
+    {{ content }}
+
+    <div>
+        {{ theme:partial src="forms/_contact_form" }}
+    </div>
 </main>
 
 {{#
-====================================
-  NOTES
-====================================
+    ====================================
+    NOTES
+    ====================================
 
-This template requires Raven (http://statamic.com/add-ons/raven) to be installed to work. All the form code is in the _contact_form partial.
+    This template requires Raven (http://statamic.com/add-ons/raven) to be installed to work. All the form code is in the _contact_form partial.
 
-#}}
+    #}}

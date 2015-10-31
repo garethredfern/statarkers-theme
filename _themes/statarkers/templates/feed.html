@@ -1,38 +1,38 @@
 <channel>
 
- <title><![CDATA[{{ _site_name }} | {{ blog_name|title }}]]></title>
- <link>{{ _site_url }}/{{ blog_name }}</link>
- <description>{{ _site_name }} {{ blog_name }}</description>
- <dc:language>{{ site_language }}</dc:language>
- <dc:creator>{{ contact_email }}</dc:creator>
- <dc:rights>Copyright {{ current_date format='Y' }}</dc:rights>
- <dc:date>{{ current_date format="c" }}</dc:date>
- <admin:generatorAgent rdf:resource="{{ _site_url }}" />
+    <title><![CDATA[{{ _site_name }} | {{ blog_name|title }}]]></title>
+    <link>{{ _site_url }}/{{ blog_name }}</link>
+    <description>{{ _site_name }} {{ blog_name }}</description>
+    <dc:language>{{ site_language }}</dc:language>
+    <dc:creator>{{ contact_email }}</dc:creator>
+    <dc:rights>Copyright {{ current_date format='Y' }}</dc:rights>
+    <dc:date>{{ current_date format="c" }}</dc:date>
+    <admin:generatorAgent rdf:resource="{{ _site_url }}" />
 
- {{ entries:listing folder="{blog_name}" limit="20" }}
+    {{ entries:listing folder="{blog_name}" limit="20" }}
     <item>
-       <title><![CDATA[{{ title }}]]></title>
-       <link>{{ permalink }}</link>
-       <guid>{{ permalink }}</guid>
-       <description>{{ content|full_urls|cdata }}</description>
-       <dc:subject>{{ categories_list|cdata }}</dc:subject>
-       <dc:date>{{ datestamp format="c" }}</dc:date>
+        <title><![CDATA[{{ title }}]]></title>
+        <link>{{ permalink }}</link>
+        <guid>{{ permalink }}</guid>
+        <description>{{ content|full_urls|cdata }}</description>
+        <dc:subject>{{ categories_list|cdata }}</dc:subject>
+        <dc:date>{{ datestamp format="c" }}</dc:date>
     </item>
- {{ /entries:listing }}
+    {{ /entries:listing }}
 
 </channel>
 
-{{# 
-====================================
-  NOTES
-====================================
+{{#
+    ====================================
+    NOTES
+    ====================================
 
-This is the RSS feed template, if you would like to have an RSS feed please change the following:
+    This is the RSS feed template, if you would like to have an RSS feed please change the following:
 
-The folder name is set to {{ blog_name }} which is a global theme variable (see theme.yaml file) but if you choose a different name for your content folder then make sure it is set to the correct name. There is also a {{ contact_email }} variable set in your theme.yaml file, set this to the correct email address.
+    The folder name is set to {{ blog_name }} which is a global theme variable (see theme.yaml file) but if you choose a different name for your content folder then make sure it is set to the correct name. There is also a {{ contact_email }} variable set in your theme.yaml file, set this to the correct email address.
 
-Entries listing tag: make sure this is set to read the correct folder, here we have set it to the {{ blog_name }} template variable (see theme.yaml file).
+    Entries listing tag: make sure this is set to read the correct folder, here we have set it to the {{ blog_name }} template variable (see theme.yaml file).
 
-For more information see: http://statamicist.com/tips/creating-an-rss-feed
-  
-#}}
+    For more information see: http://statamicist.com/tips/creating-an-rss-feed
+
+    #}}

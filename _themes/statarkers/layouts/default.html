@@ -1,35 +1,30 @@
 {{ theme:partial src="site/_doc_head" }}
-<body class="site {{ if segment_1 == "" }}home{{ else }}{{ segment_1 }}{{ endif }}">
+<body>
 
-  {{ theme:partial src="site/_header" }}
+    {{ theme:partial src="site/_header" }}
 
-  {{ theme:partial src="nav/_main_nav" }}
+    {{ theme:partial src="nav/_main_nav" }}
 
-  <div class="constrain">
-    {{ layout_content }}
-  </div><!-- END .constrain -->
+    <div>
+        {{ layout_content }}
+    </div><!-- END .constrain -->
 
-  {{ theme:partial src="site/_footer" }}
+    {{ theme:partial src="site/_footer" }}
 
-<!--[if IE 8]>
-<script src="{{ theme:js src="libs/DOMAssistantCompressed-2.8.1.js" }}"></script>
-<script src="{{ theme:asset src="bower_components/selectivizr/selectivizr.js" }}"></script>
-<![endif]-->
-<!--[if gte IE 8]><!-->
-<script src="{{ theme:js }}"></script>
-<!--<![endif]-->
+    <script src="{{ theme:js }}"></script>
+
 </body>
 </html>
 
 {{#
-====================================
-  NOTES
-====================================
+    ====================================
+    NOTES
+    ====================================
 
-This is the default layouts template used by all pages. If no other layout file is called then Statamic will use this file.
+    This is the default layouts template used by all pages. If no other layout file is called then Statamic will use this file.
 
-For more information on how Statamic works and the three distinct pieces: content file, template and layout see http://statamic.com/learn/core-concepts/how-pages-are-built.
+    For more information on how Statamic works and the three distinct pieces: content file, template and layout see http://statamic.com/learn/core-concepts/how-pages-are-built.
 
-The RSS link is used in the header. If you are creating an RSS feed make sure to change the title attribute. If you are not creating an RSS feed then you can delete this. For more information on the RSS Feed set up see the feed.html template.
+    The RSS link is used in the header. If you are creating an RSS feed make sure to change the title attribute. If you are not creating an RSS feed then you can delete this. For more information on the RSS Feed set up see the feed.html template.
 
-#}}
+    #}}
