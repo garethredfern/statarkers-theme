@@ -32,4 +32,3 @@ An example form template and partial are included with the theme, to make use of
 
 ### Additional Modules
 - [Statarkers Membership](https://github.com/statamicthemes/statarkers-membership)
-- [Statarkers Nav](https://github.com/statamicthemes/statarkers-nav)
